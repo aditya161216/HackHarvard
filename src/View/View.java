@@ -1,4 +1,5 @@
 package View;
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
@@ -30,9 +31,25 @@ public class View {
     private JButton replay;
 
     public View() {
-
+        init();
     }
 
     public void init() {
+        setTitle("Tinder for sports");
+        setSize(1000, 1000);
+        setLocationRelativeTo(null);
+        setResizable(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        mainPanel = new JPanel();
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));
+        mainScrollPane = new JScrollPane(mainPanel);
+        this.add(mainScrollPane, BorderLayout.CENTER);
+        setVisible(true);
+
+    }
+
+    public static void main(String[]args) {
+        View v = new View();
+
     }
 }
