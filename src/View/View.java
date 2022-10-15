@@ -34,6 +34,5 @@ public class View {
     }
 
     public void init() {
-        setTitle()
     }
 }
